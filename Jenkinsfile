@@ -17,6 +17,7 @@ pipeline {
                 withCredentials([usernamePassword(credentialsId: '9462cb13-6083-4b67-9a80-95876d2b89b7', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
                     sh "docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}"
                     sh "docker push nishchai17/hello-world-war:1.0.1"
+                }
             }
          }  
     }
